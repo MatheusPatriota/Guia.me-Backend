@@ -17,4 +17,11 @@ export class UsersController {
     const user = await this.userService.getUser(userId);
     return user;
   }
+
+  @Get("SignWithGoogle")
+  async signWithGoogle() {
+    // const userData = await this.userService.signInWithGoogle();
+    // console.log("userData", userData);
+    // do something with userData
+  }
 }
