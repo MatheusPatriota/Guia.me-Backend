@@ -1,4 +1,4 @@
-import { Controller, Get, Param } from "@nestjs/common";
+import { Controller, Get, Param, Request } from "@nestjs/common";
 import { UserService } from "./user.service";
 
 @Controller("users")
@@ -18,10 +18,17 @@ export class UsersController {
     return user;
   }
 
-  @Get("SignWithGoogle")
-  async signWithGoogle() {
-    // const userData = await this.userService.signInWithGoogle();
-    // console.log("userData", userData);
-    // do something with userData
+  @Get("login")
+  async login(@Request() req) {
+    const authToken = await this.userService.authenticateWithFirebase(
+      req.token
+    );
+    return { authToken };
   }
+
+  // @Get("protected")
+  // @UseGuards(AuthGuard("jwt"))
+  // protectedRoute() {
+  //   return "This is a protected route";
+  // }
 }

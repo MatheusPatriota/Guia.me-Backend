@@ -1,8 +1,8 @@
 /* eslint-disable prettier/prettier */
 import { Injectable } from "@nestjs/common";
 import * as admin from "firebase-admin";
-import { firestore } from "src/config/firebase.config";
-import * as firebase from 'firebase';
+import * as jwt from 'jsonwebtoken';
+
 @Injectable()
 export class UserService {
   async listUsers(): Promise<admin.auth.UserRecord[]> {
@@ -16,21 +16,25 @@ export class UserService {
     return userResult;
   }
   //login with google
-  async signInWithGoogle(token: string) {
-    const credential = firebase.auth.GoogleAuthProvider.credential(token);
-    const { user } = await firebase.auth().signInWithCredential(credential);
+  async authenticateWithFirebase(token: string): Promise<string> {
+    try {
+      const decodedToken = await admin.auth().verifyIdToken(token);
 
-    const userRef = firestore.collection('users').doc(user.uid);
-    const doc = await userRef.get();
-    if (!doc.exists) {
-      await userRef.set({
-        email: user.email,
-        displayName: user.displayName,
-        photoURL: user.photoURL,
-        createdAt: new Date(),
+      const user = {
+        uid: decodedToken.uid,
+        email: decodedToken.email,
+        displayName: decodedToken.name,
+        photoURL: decodedToken.picture,
+        provider: decodedToken.firebase.sign_in_provider,
+      };
+
+      const authToken = jwt.sign(user, 'your-secret-key', {
+        expiresIn: '1h',
       });
-    }
 
-    return user;
+      return authToken;
+    } catch (err) {
+      throw new Error(err.message);
+    }
   }
 }
