@@ -1,17 +1,15 @@
 /* eslint-disable prettier/prettier */
 import {
+  BadRequestException,
   Controller,
+  Get,
   Post,
   Request,
   UseGuards,
-  Get,
-  BadRequestException,
 } from "@nestjs/common";
-import { AuthGuard } from "@nestjs/passport";
 
 import { AuthService } from "./auth.service";
-import { JwtAuthGuard } from "./JwtAuthGuard";
-import { LocalAuthGuard } from "./local-auth.guard";
+import { JwtAuthGuard } from "./jwt-auth.guard";
 
 console.log("entrei no Auth");
 @Controller("account")
@@ -29,14 +27,18 @@ export class AuthController {
   // @UseGuards(LocalAuthGuard)
   @Post("login")
   async login(@Request() req) {
-    console.log("request", req);
+    // console.log("request", req);
     try {
       const authToken = await this.authService.authenticateWithFirebase(
         req.body.token
       );
       return { authToken };
     } catch (error) {
-      throw new BadRequestException("Erro ao autenticar usuário");
+      console.log("error", error);
+      throw new BadRequestException({
+        error: "Erro ao autenticar usuário",
+        message: error.message,
+      });
     }
   }
 
@@ -44,10 +46,13 @@ export class AuthController {
   @Get("isLogged")
   getProfile(@Request() req) {
     try {
-      return req.user;
+      return { message: "User is logged" };
     } catch (error) {
       // Aqui você pode tratar o erro e enviar uma resposta de erro para o cliente
-      return { error: "Ocorreu um erro ao verificar o perfil do usuário." };
+      throw new BadRequestException({
+        error: "Ocorreu um erro ao verificar o perfil do usuário.",
+        message: error.message,
+      });
     }
   }
 }

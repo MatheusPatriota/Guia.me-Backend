@@ -1,8 +1,8 @@
 /* eslint-disable prettier/prettier */
-import { Injectable } from '@nestjs/common';
-import * as jwt from 'jsonwebtoken';
-import { auth } from 'src/config/firebase.config';
-import { UsersService } from 'src/users/users.service';
+import { Injectable } from "@nestjs/common";
+import * as jwt from "jsonwebtoken";
+import { auth } from "src/config/firebase.config";
+import { UsersService } from "src/users/users.service";
 
 @Injectable()
 export class AuthService {
@@ -16,6 +16,9 @@ export class AuthService {
   async authenticateWithFirebase(token: string): Promise<string> {
     try {
       console.log("token", token);
+      if (!token) {
+        throw new Error("token is empty");
+      }
       const decodedToken = await auth.verifyIdToken(token);
 
       const user = {

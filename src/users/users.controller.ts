@@ -1,8 +1,8 @@
-import { Controller, Get, Header, UseGuards } from "@nestjs/common";
+import { Controller, Get, Header, UseGuards, Param } from "@nestjs/common";
 import { ExtractJwt } from "passport-jwt";
-import { JwtAuthGuard } from "src/auth/JwtAuthGuard";
 
 import { UsersService } from "./users.service";
+import { JwtAuthGuard } from "../auth/jwt-auth.guard";
 
 const token = ExtractJwt.fromAuthHeaderAsBearerToken();
 console.log("token backend", token);
@@ -14,16 +14,22 @@ export class UsersController {
   @UseGuards(JwtAuthGuard)
   @Header("Authorization", `Bearer ${token.toString}`)
   async getAllUsers() {
-    const users = await this.userService.listUsers();
-    return users;
+    try {
+      const users = await this.userService.listUsers();
+      return users;
+    } catch (error) {
+      return { error: error };
+    }
   }
-
-  // @Get(":userId")
-  // async getUserById(@Param("userId") userId: string) {
-  //   console.log("user ", userId);
-  //   const user = await this.userService.getUser(userId);
-  //   return user;
-  // }
+  
+  @Get(":userId")
+  @UseGuards(JwtAuthGuard)
+  @Header("Authorization", `Bearer ${token.toString}`)
+  async getUserById(@Param("userId") userId: string) {
+    console.log("user ", userId);
+    const user = await this.userService.getUser(userId);
+    return user;
+  }
 
   // @Get("protected")
   // @UseGuards(AuthGuard("jwt"))
