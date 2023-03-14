@@ -1,24 +1,21 @@
 /* eslint-disable prettier/prettier */
-import { Injectable } from "@nestjs/common";
+import { Injectable } from '@nestjs/common';
 import * as jwt from 'jsonwebtoken';
-import { auth } from "src/config/firebase.config";
+import { auth } from 'src/config/firebase.config';
+import { UsersService } from 'src/users/users.service';
 
 @Injectable()
-export class UserService {
-  async listUsers(): Promise<any> {
-    const listUsersResult = await auth.listUsers();
-    const users = listUsersResult.users;
-    return users;
-  }
-  // async getUser(userId: string): Promise<admin.auth.UserRecord> {
-  //   const userResult = await admin.auth().getUser(userId);
-  //   console.log("user result", userResult);
-  //   return userResult;
-  // }
-  //login with google
+export class AuthService {
+  constructor(private usersService: UsersService) {}
+
+  // constructor(
+  //   private usersService: UsersService,
+  //   private jwtService: JwtService
+  // ) {}
+
   async authenticateWithFirebase(token: string): Promise<string> {
     try {
-      console.log("token", token)
+      console.log("token", token);
       const decodedToken = await auth.verifyIdToken(token);
 
       const user = {
@@ -30,7 +27,7 @@ export class UserService {
       };
 
       const authToken = jwt.sign(user, process.env.JWT_SECRET_KEY, {
-        expiresIn: '1h',
+        expiresIn: "1h",
       });
 
       return authToken;

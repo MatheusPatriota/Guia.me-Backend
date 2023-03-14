@@ -3,6 +3,8 @@ import { Injectable } from "@nestjs/common";
 import { PassportStrategy } from "@nestjs/passport";
 import { ExtractJwt, Strategy } from "passport-jwt";
 
+console.log("entrei no auth guard")
+console.log("token aqui dentro: ",ExtractJwt.fromAuthHeaderAsBearerToken)
 @Injectable()
 export class JwtAuthGuard extends PassportStrategy(Strategy) {
   constructor() {
