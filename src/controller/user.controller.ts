@@ -36,11 +36,11 @@ const GetAllUsers = async (request: Request, response: Response, next: any) => {
         });
       })
       .catch((err) => {
-        console.log("Error getting users:", err);
+        // console.log("Error getting users:", err);
         return response.status(500).send("Error getting users");
       });
   } catch (error: any) {
-    console.error(error);
+    // console.error(error);
     return response.status(401).json({
       message: "Unauthorized",
       errorMessage: error.message,
@@ -68,15 +68,24 @@ const GetOneUser = async (request: Request, response: Response) => {
     const isValidToken = await validateFirebaseToken(token);
     if (!isValidToken) throw new Error("Invalid authorization token");
 
-    const user = await auth.getUser(userId);
-    console.log("user", user);
+    const userCollection = db.collection("users");
+    if (!userCollection) throw new Error("Error in load all users");
 
-    return response.status(200).json({
-      message: "Request Successful",
-      users: user,
+    const userDoc = userCollection.doc(userId);
+
+    userDoc.get().then((doc) => {
+      if (!doc.exists) {
+        throw new Error("User not found!");
+      } else {
+        // console.log("user", doc.data());
+        return response.status(200).json({
+          message: "Request Successful",
+          users: doc.data(),
+        });
+      }
     });
   } catch (error: any) {
-    console.error(error);
+    // console.error(error);
     return response.status(401).json({
       message: "Unauthorized",
       errorMessage: error.message,
