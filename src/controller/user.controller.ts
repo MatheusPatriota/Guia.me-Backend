@@ -80,7 +80,7 @@ const GetOneUser = async (request: Request, response: Response) => {
         // console.log("user", doc.data());
         return response.status(200).json({
           message: "Request Successful",
-          users: doc.data(),
+          user: doc.data(),
         });
       }
     });
