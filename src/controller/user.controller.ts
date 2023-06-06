@@ -92,5 +92,59 @@ const GetOneUser = async (request: Request, response: Response) => {
     });
   }
 };
+/**
+ * Get user by Id in firestore
+ * @param request
+ * @param response
+ * @returns
+ */
 
-export { GetAllUsers, GetOneUser };
+const UpdateUserInformation = async (request: Request, response: Response) => {
+  try {
+    const userId = request.params.id;
+    const data = request.body;
+
+    console.log("userId", userId);
+    console.log("data", data);
+    
+    if (!data) throw new Error("Data body not found");
+    if (Object.keys(data).length === 0) throw new Error("Data body is empty");
+    
+    if (!userId) throw new Error("User id parameter not found");
+    
+    const token = request.headers.authorization;
+    if (!token) throw new Error("Authorization token not found");
+    console.log("token", token);
+    
+    const isValidToken = await validateFirebaseToken(token);
+    if (!isValidToken) throw new Error("Invalid authorization token");
+    console.log("isValidToken", isValidToken);
+
+    const userCollection = db.collection("users");
+    if (!userCollection) throw new Error("users collection not found");
+
+    const userDoc = userCollection.doc(userId);
+
+    userDoc.get().then((doc) => {
+      if (!doc.exists) {
+        throw new Error("User not found!");
+      } else {
+        userDoc.update(data).then((doc) => {
+          return response.status(200).json({
+            message: "Request Successful",
+            user: data,
+          });
+        });
+        // console.log("user", doc.data());
+      }
+    });
+  } catch (error: any) {
+    // console.error(error);
+    return response.status(401).json({
+      message: "Unauthorized",
+      errorMessage: error.message,
+    });
+  }
+};
+
+export { GetAllUsers, GetOneUser, UpdateUserInformation };
