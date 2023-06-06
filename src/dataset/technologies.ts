@@ -156,12 +156,6 @@
       },
     ],
     technology_youtube_videos: [
-      "https://www.youtube.com/watch?v=nyIpDs2DJ_c",
-      "https://www.youtube.com/watch?v=G7an8Pp2IrQ",
-      "https://www.youtube.com/watch?v=FhGky46H-_E",
-      "https://www.youtube.com/watch?v=HkFlM73GH",
-    ],
-    technology_youtube_videos: [
       "https://www.youtube.com/watch?v=HkFlM73G-hk",
       "https://www.youtube.com/watch?v=0_C2X1yRRac",
       "https://www.youtube.com/watch?v=7e5apiL5Xiw",
