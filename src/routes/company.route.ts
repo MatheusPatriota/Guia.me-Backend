@@ -1,8 +1,15 @@
-import express from 'express';
-import { CreateCompany } from '../controller/company.controller';
+import express from "express"
+import {
+	CreateCompany,
+	GenerateCompaniesRecommendation,
+} from "../controller/company.controller"
 
 const companyRoutes = express.Router()
 
-companyRoutes.post('/', CreateCompany);
+companyRoutes.post("/", CreateCompany)
+companyRoutes.post(
+	"/GenerateCompaniesRecommendation",
+	GenerateCompaniesRecommendation
+)
 
-export {companyRoutes}
+export { companyRoutes }
