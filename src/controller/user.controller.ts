@@ -147,4 +147,27 @@ const UpdateUserInformation = async (request: Request, response: Response) => {
   }
 };
 
-export { GetAllUsers, GetOneUser, UpdateUserInformation };
+const validateToken = async (request: Request, response: Response) => {
+  try {
+    const token = request.body.authToken
+    if(!token) throw new Error("Token not provided")
+
+    const decodedToken = await auth.verifyIdToken(token);
+    if(!decodedToken) throw new Error("Invalid token")
+
+    // console.log("/----------------------/")
+    // console.log("decodedToken", decodedToken)
+    // console.log("/----------------------/")
+    return response.status(200).json({
+      message: "Token is valid",
+    });
+  } catch (error: any) {
+    console.log("error", error);
+    return response.status(401).json({
+      message: "token is invalid",
+      errorMessage: error.message,
+    });
+  }
+}
+
+export { GetAllUsers, GetOneUser, UpdateUserInformation,validateToken };
