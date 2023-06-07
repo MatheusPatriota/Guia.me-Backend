@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "ts-node-dev --no-notify --respawn src/index.ts"
+    "python-dependencies": "pip install -r src\\utils\\requirements.txt",
+    "dev": "yarn python-dependencies && ts-node-dev --no-notify --respawn src/index.ts"
   },
   "keywords": [],
   "author": "",

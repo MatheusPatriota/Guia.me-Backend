@@ -13,6 +13,6 @@ export const validateFirebaseToken = async (token: string): Promise<any>  => {
     return true;
   } catch (error: any) {
     console.log("error", error);
-    throw new Error("Invalid Token");
+    return false;
   }
 };
