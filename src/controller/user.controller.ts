@@ -160,11 +160,13 @@ const validateToken = async (request: Request, response: Response) => {
     // console.log("/----------------------/")
     return response.status(200).json({
       message: "Token is valid",
+      isValid: true,
     });
   } catch (error: any) {
     console.log("error", error);
     return response.status(401).json({
       message: "token is invalid",
+      isValid: false,
       errorMessage: error.message,
     });
   }
