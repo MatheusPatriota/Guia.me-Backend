@@ -62,7 +62,7 @@ async function GenerateCompaniesRecommendation(
 			throw new Error("User Technologies not provided")
 		}
 
-		const arg1 = userMarketArea
+		const arg1 = userMarketArea.join(",")
 		const arg2 = userTechnologies.join(",")
 
 		const resultado = await generateRecommendedCompanies(arg1, arg2)
