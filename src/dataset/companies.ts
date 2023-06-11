@@ -29,6 +29,9 @@
         "Equilíbrio vida-trabalho",
       ],
     },
+    description: "Google é uma empresa multinacional de serviços online e software dos Estados Unidos. O Google hospeda e desenvolve uma série de serviços e produtos baseados na internet e gera lucro principalmente através da publicidade pelo AdWords. A empresa foi fundada por Larry Page e Sergey Brin, enquanto ambos eram estudantes da Universidade Stanford. O Google é conhecido por sua cultura corporativa inovadora e ambiente de trabalho atraente.",
+    general_vision: "Um problema não está verdadeiramente resolvido até que seja resolvido para todos. Os Googlers criam produtos que ajudam a criar oportunidades para todos, seja na rua ou em todo o mundo. Traga sua percepção, imaginação e um saudável desrespeito pelo impossível. Traga tudo o que o torna único. Juntos, podemos construir para todos. Confira nossas oportunidades de carreira em carreiras.google.com.",
+    avaliation: 4.4,
   },
   {
     company_name: "Microsoft",
@@ -60,6 +63,9 @@
         "Inovação",
       ],
     },
+    description: "A Microsoft é uma empresa multinacional de tecnologia dos Estados Unidos. Ela é conhecida principalmente por seus sistemas operacionais, como o Windows, e seu pacote de produtividade, o Office. Além disso, a Microsoft oferece serviços de computação em nuvem através da plataforma Azure e está envolvida no setor de jogos com o Xbox. A empresa foi fundada por Bill Gates e Paul Allen e tem uma presença significativa no mercado global de tecnologia.",
+    general_vision: "Toda empresa tem uma missão. Qual é o nosso? Para capacitar cada pessoa e cada organização para alcançar mais. Acreditamos que a tecnologia pode e deve ser uma força para o bem e que inovações significativas contribuem para um mundo mais brilhante no futuro e hoje. Nossa cultura não apenas encoraja a curiosidade; ele o abraça. Todos os dias, progredimos juntos, mostrando-nos autênticos. Nós aparecemos com uma mentalidade de aprender tudo. Aparecemos torcendo pelos outros, sabendo que o sucesso deles não diminui o nosso. Aparecemos todos os dias abertos para aprender nossos próprios preconceitos, mudar nosso comportamento e convidar as diferenças. Quando aparecemos, alcançamos mais juntos. A Microsoft opera em 190 países e é composta por mais de 220.000 funcionários apaixonados em todo o mundo.",
+    avaliation: 4.3,
   },
   {
     company_name: "Amazon",
@@ -92,6 +98,9 @@
         "Gerenciamento",
       ],
     },
+    description: "A Amazon é uma empresa multinacional de comércio eletrônico e serviços de computação em nuvem. Ela é uma das maiores varejistas online do mundo e também desenvolveu a plataforma de computação em nuvem conhecida como Amazon Web Services (AWS). A Amazon é conhecida por sua abordagem inovadora aos negócios, adoção de tecnologias avançadas, como machine learning, e seu foco em oferecer uma ampla gama de produtos e serviços aos seus clientes.",
+    general_vision: "A Amazon se esforça para ser a empresa mais centrada no cliente da Terra, onde as pessoas podem encontrar e descobrir praticamente qualquer coisa que desejam comprar on-line. Ao oferecer aos clientes mais do que querem - preços baixos, vasta seleção e conveniência - a Amazon continua a crescer e a evoluir como uma plataforma de comércio eletrônico de classe mundial. Fundada por Jeff Bezos, o site Amazon.com começou em 1995 como um lugar para comprar livros devido à experiência exclusiva ao cliente que a Web poderia oferecer aos amantes de livros. Bezos acreditava que apenas a Internet poderia oferecer aos clientes a conveniência de navegar atraves de uma seleção de milhões de títulos de livros em uma única sessão. Durante os primeiros 30 dias de negócios, a Amazon realizou pedidos para clientes em 50 estados e 45 países - todos enviados de sua garagem na área de Seattle. A evolução da Amazon de site para o parceiro de comércio eletrônico para a plataforma de desenvolvimento é impulsionada pelo espírito de inovação que faz parte do DNA da empresa. As mentes de tecnologia mais brilhantes do mundo chegam à Amazon.com para pesquisar e desenvolver tecnologia que melhore a vida de compradores e vendedores em todo o mundo.",
+    avaliation: 3.8,
   },
   {
     company_name: "Apple",
@@ -118,6 +127,9 @@
         "Gerenciamento",
       ],
     },
+    description: "A Apple é uma empresa multinacional de tecnologia sediada nos Estados Unidos. Ela projeta, desenvolve e vende uma ampla variedade de produtos eletrônicos de consumo, software e serviços online. A Apple é conhecida por sua inovação em produtos como o iPhone, iPad, Mac e Apple Watch, bem como por seu sistema operacional iOS. A empresa tem uma base de clientes leais e é reconhecida por sua abordagem focada no design e na experiência do usuário.",
+    general_vision: "Somos um coletivo diversificado de pensadores e realizadores, continuamente reinventando o que é possível para nos ajudar a fazer o que amamos de novas maneiras. E a mesma inovação que entra em nossos produtos também se aplica às nossas práticas — fortalecendo nosso compromisso de deixar o mundo melhor do que o encontramos. É aqui que o seu trabalho pode fazer a diferença na vida das pessoas. Incluindo o seu próprio. A Apple é um empregador de oportunidades iguais que está comprometido com a inclusão e a diversidade. Acesse apple.com/careers para saber mais.",
+    avaliation: 4.2,
   },
   {
     company_name: "IBM",
@@ -149,6 +161,9 @@
         "Salários",
       ],
     },
+    description: "A IBM, International Business Machines Corporation, é uma empresa multinacional de tecnologia e consultoria com sede nos Estados Unidos. A IBM é uma das maiores empresas de tecnologia do mundo e oferece uma ampla gama de produtos e serviços, incluindo hardware, software, serviços de nuvem, inteligência artificial e blockchain. A empresa tem uma longa história de inovação e é conhecida por seu sistema de computação Watson, que utiliza inteligência artificial para realizar análises avançadas e resolver problemas complexos.",
+    general_vision: "A IBM é uma empresa global de tecnologia e inovação com sede em Armonk, Nova York, nos Estados Unidos. É o maior empregador do setor de tecnologia e consultoria do mundo, com aproximadamente 427.000 funcionários servindo a clientes em 170 países. A IBM oferece um extenso portfólio de serviços de tecnologia e consultoria, softwares de colaboração e análise preditiva, desenvolvimento e gerenciamento de sistemas, além dos mais avançados servidores e supercomputadores do mundo. Através da sua consultoria de negócios, tecnologia e conhecimento na área de P&D, a IBM ajuda clientes a se tornarem 'mais inteligentes'​ enquanto o planeta se torna cada vez mais digitalmente interconectado. Isso inclui o trabalho com organizações e governos para construir sistemas que melhoram os tráfegos nas cidades, a disponibilidade de água potável e a saúde e segurança da população. A IBM investe mais de US$ 6 bilhões por ano em P&D, sendo líder de lançamentos de patentes pelo 18o ano. A área de pesquisa da IBM, o IBM Research, foi reconhecida além das pesquisas de tecnologia comercial e recebeu 5 prêmios Nobel Laureates, 9 prêmios do US National Medals of Technology, 5 prêmios do US National Medals of Science, 6 prêmios Turing e 10 IBMistas nomeados para o US Inventors Hall of Fame. A companhia está por trás de invenções como o PC, o sistema de reserva de viagens SABRE, os códigos de barras - hoje estampados na embalagem de diversos produtos, o supercomputador Watson, entre muitas outras inovações.",
+    avaliation: 4.0,
   },
   {
     company_name: "TOTVS",
@@ -180,6 +195,9 @@
         "Gerenciamento",
       ],
     },
+    description: "A TOTVS é uma empresa brasileira de tecnologia da informação e serviços, especializada em soluções de software para empresas. Ela oferece um conjunto abrangente de soluções de gestão empresarial, incluindo sistemas ERP, software de gestão e consultoria. A TOTVS atende a uma ampla variedade de setores e é conhecida por sua expertise em soluções personalizadas para atender às necessidades específicas de cada cliente. A empresa está comprometida em oferecer oportunidades de crescimento e desenvolvimento para seus funcionários.",
+    general_vision: "Olá, somos a TOTVS! A maior empresa de tecnologia do Brasil. ",
+    avaliation: 4.3,
   },
   {
     company_name: "CI&T",
@@ -211,6 +229,9 @@
         "Equilíbrio vida-trabalho",
       ],
     },
+    description: "A CI&T é uma empresa global de tecnologia da informação e serviços com sede no Brasil. Ela oferece serviços de desenvolvimento de software, consultoria em tecnologia, design e soluções móveis. A CI&T trabalha com empresas de diversos setores, ajudando-as a impulsionar sua transformação digital e a criar experiências inovadoras para seus clientes. A empresa valoriza uma cultura inclusiva e colaborativa, proporcionando um ambiente de trabalho flexível e oportunidades de crescimento para seus funcionários.",
+    general_vision: "CI&T é sua parceira de transformação digital de ponta a ponta.  Nativa digital, trazemos um histórico de 27 anos de aceleração do impacto nos negócios por meio de soluções digitais completas e escaláveis. Com presença global de 6.000+ profissionais em estratégia, pesquisa, ciência de dados, design e engenharia, desbloqueamos  o crescimento de receita, impulsionamos a experiência do cliente e aumentamos a eficiência operacional.",
+    avaliation: 4.4,
   },
   {
     company_name: "iFood",
@@ -242,6 +263,9 @@
         "Salários",
       ],
     },
+    description: "iFood é uma plataforma de entrega de alimentos online, que conecta restaurantes e clientes. A empresa oferece um aplicativo móvel e um site para que os usuários possam fazer pedidos de comida de diversos restaurantes parceiros. Com foco na inovação, o iFood utiliza tecnologias como logística, e-commerce e desenvolvimento de software para melhorar a experiência de entrega de alimentos.",
+    general_vision: "O iFood é a maior foodtech da América Latina! Com 8 anos de atuação, tem o propósito de revolucionar o universo da alimentação por uma vida mais prática e prazerosa. São milhões de pedidos por mês em verdadeiras Black Fridays semanais, em um ambiente tecnológico inovador e o desafio do forte crescimento com nossos parceiros entregadores, restaurantes e clientes. O iFood conta com a participação da Movile - líder global em marketplaces móveis - e da Just Eat",
+    avaliation: 4.3,
   },
   {
     company_name: "Stone Pagamentos",
@@ -273,6 +297,9 @@
         "Burocracia",
       ],
     },
+    description: "A Stone Pagamentos é uma empresa de tecnologia que oferece soluções de pagamentos e serviços financeiros para empreendedores e pequenas empresas. Com sua plataforma de pagamentos, a Stone facilita o recebimento de pagamentos tanto em estabelecimentos físicos quanto em e-commerce. Além disso, a empresa atua como uma fintech, fornecendo serviços financeiros e atendimento personalizado aos seus clientes.",
+    general_vision: "",
+    avaliation: 3.6,
   },
   {
     company_name: "Nubank",
@@ -304,5 +331,8 @@
         "Crescimento",
       ],
     },
+    description: "O Nubank é uma fintech brasileira que oferece serviços financeiros por meio de seu aplicativo móvel e plataforma online. A empresa é conhecida principalmente por seu cartão de crédito sem anuidade e pela conta digital. Além disso, o Nubank oferece serviços de mobile banking, pagamentos e investimentos. Com foco na inovação e na experiência do cliente, o Nubank busca proporcionar soluções financeiras acessíveis e eficientes através da tecnologia.",
+    general_vision: "O Nu nasceu em 2013 com a missão de lutar contra a complexidade para empoderar pessoas diariamente, reinventando os serviços financeiros. Somos uma das maiores plataformas financeiras no mundo, servindo mais de 70 milhões de clientes no Brasil, México e Colômbia. Em nossa posição de liderança, usamos tecnologia proprietária e práticas inovadoras para criar novas soluções e experiências financeiras para indivíduos e PMEs. Tudo que entregamos é simples, intuitivo, conveniente, de baixo custo, empoderador e humano. Guiando-nos sempre por nossa missão, estamos contribuindo para aumentar o acesso financeiro na América Latina",
+    avaliation: 4.3,
   },
 ];
