@@ -113,7 +113,7 @@ async function generateRecommendedCompanies(
 	})
 }
 
-async function GenerateJobsRecomendation(request: Request, response: Response) {
+async function GenerateJobsRecommendation(request: Request, response: Response) {
 	try {
 		// const token = request.headers.authorization
 
@@ -175,5 +175,5 @@ export {
 	Company,
 	CreateCompany,
 	GenerateCompaniesRecommendation,
-	GenerateJobsRecomendation,
+	GenerateJobsRecommendation,
 }

@@ -2,7 +2,7 @@ import express from "express"
 import {
 	CreateCompany,
 	GenerateCompaniesRecommendation,
-	GenerateJobsRecomendation,
+	GenerateJobsRecommendation,
 } from "../controller/company.controller"
 
 const companyRoutes = express.Router()
@@ -14,6 +14,6 @@ companyRoutes.post(
 	GenerateCompaniesRecommendation
 )
 
-companyRoutes.post("/GenerateJobsRecomendation", GenerateJobsRecomendation)
+companyRoutes.post("GenerateJobsRecommendation", GenerateJobsRecommendation)
 
 export { companyRoutes }
