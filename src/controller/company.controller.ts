@@ -115,18 +115,20 @@ async function generateRecommendedCompanies(
 
 async function GenerateJobsRecommendation(request: Request, response: Response) {
 	try {
-		// const token = request.headers.authorization
+		const token = request.headers.authorization
 
-		// if (!token) {
-		// 	throw new Error("Auth Token not provided")
-		// }
+		if (!token) {
+			throw new Error("Auth Token not provided")
+		}
 
-		// const isValidToken = await validateFirebaseToken(token)
-		// if (!isValidToken) throw new Error("Invalid authorization token")
+		const isValidToken = await validateFirebaseToken(token)
+		if (!isValidToken) throw new Error("Invalid authorization token")
+		// args can be "Tech company"
+		const jobSearchArgument = request.body.jobSearchArgument;
 
-		const arg1 = "microsoft"
+		if(!jobSearchArgument) throw new Error("Job Search Argument not provided")
 
-		const resultado = await generateRecommendedJobs(arg1)
+		const resultado = await generateRecommendedJobs(jobSearchArgument)
 
 		return response.status(200).json({
 			message: "Successful",
