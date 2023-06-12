@@ -14,6 +14,6 @@ companyRoutes.post(
 	GenerateCompaniesRecommendation
 )
 
-companyRoutes.post("GenerateJobsRecommendation", GenerateJobsRecommendation)
+companyRoutes.post("/GenerateJobsRecommendation", GenerateJobsRecommendation)
 
 export { companyRoutes }
