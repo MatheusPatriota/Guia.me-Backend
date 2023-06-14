@@ -8,7 +8,7 @@
     "dev": "yarn python-dependencies && ts-node-dev --no-notify --respawn src/index.ts",
     "build": "tsc",
     "start": "yarn python-dependencies && node dist/index.js",
-    "deploy": "node build/index.js"
+    "deploy": "node dist/index.js"
   },
   "keywords": [],
   "author": "",
