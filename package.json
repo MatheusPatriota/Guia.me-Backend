@@ -6,7 +6,8 @@
   "scripts": {
     "python-dependencies": "pip install -r src\\utils\\requirements.txt",
     "dev": "yarn python-dependencies && ts-node-dev --no-notify --respawn src/index.ts",
-    "build": "tsc",
+    "copy-scripts": "mkdir dist\\src\\utils 2>nul && xcopy /s /I src\\utils\\* dist\\src\\utils",
+    "build": "tsc && yarn copy-scripts",
     "start": "yarn python-dependencies && node dist/index.js",
     "deploy": "node dist/index.js"
   },
