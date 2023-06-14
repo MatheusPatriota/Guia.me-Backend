@@ -132,7 +132,7 @@ async function GenerateJobsRecommendation(request: Request, response: Response) 
 
 		return response.status(200).json({
 			message: "Successful",
-			companies: resultado,
+			jobs: resultado,
 		})
 	} catch (error: any) {
 		// console.error(error);
