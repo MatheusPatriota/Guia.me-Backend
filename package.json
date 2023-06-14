@@ -4,12 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "python-dependencies": "pip install -r src\\utils\\requirements.txt",
+    "python-dependencies-win": "pip install -r src\\utils\\requirements.txt",
+    "python-dependencies-linux": "pip install -r src/utils/requirements.txt",
     "dev": "yarn python-dependencies && ts-node-dev --no-notify --respawn src/index.ts",
     "copy-scripts-win": "mkdir dist\\src\\utils 2>nul && xcopy /s /I src\\utils\\* dist\\src\\utils",
     "copy-scripts-linux": "mkdir -p dist/src/utils && cp -R src/utils/* dist/src/utils/",
     "build": "tsc && yarn copy-scripts-linux",
-    "start": "yarn python-dependencies && node dist/index.js",
+    "start": "yarn python-dependencies-linux && node dist/index.js",
     "deploy": "node dist/index.js"
   },
   "keywords": [],
