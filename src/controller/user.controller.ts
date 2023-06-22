@@ -43,7 +43,7 @@ const GetAllUsers = async (request: Request, response: Response, next: any) => {
     // console.error(error);
     return response.status(401).json({
       message: "Unauthorized",
-      errorMessage: error.message,
+      errorMessage: error,
     });
   }
 };
@@ -88,7 +88,7 @@ const GetOneUser = async (request: Request, response: Response) => {
     // console.error(error);
     return response.status(401).json({
       message: "Unauthorized",
-      errorMessage: error.message,
+      errorMessage: error,
     });
   }
 };
@@ -142,7 +142,7 @@ const UpdateUserInformation = async (request: Request, response: Response) => {
     // console.error(error);
     return response.status(401).json({
       message: "Unauthorized",
-      errorMessage: error.message,
+      errorMessage: error,
     });
   }
 };

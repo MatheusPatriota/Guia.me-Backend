@@ -75,7 +75,7 @@ async function GenerateCompaniesRecommendation(
 		// console.error(error);
 		return response.status(401).json({
 			message: "Unauthorized",
-			errorMessage: error.message,
+			errorMessage: error,
 		})
 	}
 }
@@ -138,7 +138,7 @@ async function GenerateJobsRecommendation(request: Request, response: Response) 
 		// console.error(error);
 		return response.status(401).json({
 			message: "Unauthorized",
-			errorMessage: error.message,
+			errorMessage: error,
 		})
 	}
 }
