@@ -2,6 +2,7 @@ import { Request, Response } from "express"
 import { db } from "../config/firebase.config"
 import { validateFirebaseToken } from "../utils/validateToken"
 import { spawn } from "child_process"
+import path from 'path';
 
 interface Company {
 	id: string
@@ -85,7 +86,7 @@ async function generateRecommendedCompanies(
 	arg2: string
 ): Promise<string[]> {
 	return new Promise<string[]>((resolve, reject) => {
-		const scriptPath = "src/utils/script.py"
+		const scriptPath = path.join("src","utils","script.py")
 
 		const processo = spawn("python", [scriptPath, arg1, arg2])
 
@@ -145,7 +146,7 @@ async function GenerateJobsRecommendation(request: Request, response: Response) 
 
 async function generateRecommendedJobs(arg1: string): Promise<string[]> {
 	return new Promise<string[]>((resolve, reject) => {
-		const scriptPath = "src/utils/scraping.py"
+		const scriptPath = path.join("src","utils","scraping.py")
 
 		const processo = spawn("python", [scriptPath, arg1])
 

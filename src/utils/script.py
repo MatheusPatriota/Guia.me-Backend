@@ -4,7 +4,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 import numpy as np
 import sys
-
+import os
 def load_data_from_js(file_path):
     with open(file_path, 'r', encoding='utf-8') as file:
         data = file.read()
@@ -14,7 +14,7 @@ def load_data_from_js(file_path):
     data = json.loads(data)
     return data
 
-data = load_data_from_js('src\dataset\dados_empresas.json')
+data = load_data_from_js(os.path.join("src","dataset","dados_empresas.json"))
 lista = []
 
 for empresa in data:
