@@ -1,0 +1,5 @@
+name: my-api
+type: service
+build:
+  publish: public
+  command: pip install --python 3.9 && pip lock --requirements > requirements.txt
